@@ -1,3 +1,10 @@
+## 1. Introduction
+
+L'idée de cette thèse était de construire un dispositif embarqué basé sur Arduino pour surveiller les variables environnementales: humidité et température et étudier ses performances à différentes températures et humidité.
+La surveillance des variables environnementales telles que la température, la pression et l'humidité a une longue histoire de développement et les variables ont montré un impact significatif sur la productivité de la croissance des plantes, la qualité de l'industrie alimentaire et l'efficacité de nombreux équipements sensibles à la température et à l'humidité. La surveillance de la température et de l'humidité des laboratoires, des entrepôts, des halls, des écoles et des hôpitaux est importante en ce qui concerne la santé et l'hygiène. La mesure et la surveillance fiables sont cruciales dans cette ère concurrentielle de la technologie.
+Ce projet comprend deux parties - une partie théorique qui donne une introduction de base aux matériaux et équipements utilisés pendant le projet et la deuxième partie fournit un processus par étapes pour la connexion et les circuits. Le projet a réussi à atteindre des objectifs prédéterminés, la mise en œuvre a été possible à l'aide du livre Arduino, des travaux antérieurs d'un autre étudiant et des sites Internet connexes où la plupart des informations sont disponibles.
+Les capteurs utilisés dans ce travail sont le capteur de température et d'humidité-DHT11. Le sensor DHT11 est un capteur analogique conçu pour détecter le changement physique de la chaleur et de l'humidité lorsqu'il est exposé dans l'air avec un câblage et une programmation appropriés.
+
 ## 2. Les exigences fonctionnelles pour le projet proposé
 
 Pour enregistreur de température a long terme, on propose de concevoir un système embarqué avec les fonctionnalités suivantes:
