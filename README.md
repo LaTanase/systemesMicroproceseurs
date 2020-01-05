@@ -21,11 +21,14 @@ Pour enregistreur de température a long terme, on propose de concevoir un syst�
 
 ### 3.1 Analyse des autres projets d'enregistrement de température sur le long terme
 
-Pour le moment, cette section est vide car je n'ai pas réussi à trouver d'autres projets similaires. Sera bientôt terminé
+La température est la principale caractéristique de l'environnement, c'est pourquoi elle est l'une des grandeurs physiques les plus enregistrées. En ce sens, nous trouvons de nombreux projets qui enregistrent la température, des centres météorologiques aux projets individuels, réalisés à des fins éducatives ou pour analyser les données fournies.
+À cet égard, nous avons analysé un projet réalisé comme thèse par Nagendra Dangi, étudiante à la Metropolitan University of Applied Sciences à Helsinki.
+https://www.theseus.fi/bitstream/handle/10024/142235/Dangi_Nagendra.pdf?sequ
+Il existe également de nombreuses entreprises dans le monde qui enregistrent les températures locales et les analysent pour pouvoir prévoir les différents phénomènes météorologiques. Un tel exemple est https://wunderground.com, qui affiche non seulement la température actuelle et offre la possibilité de visualiser les températures passées, ainsi qu'une prévision des événements météorologiques qui se produiront dans un avenir proche ou lointain.
 
 ### 3.2 Analyse des moniteurs de temperature a long terme disponibles dans le commerce
 
-Meme comme le point 3.1.
+Le premier recherche sur le google pour "environment temperature monitor system long term" trouve le site du Vaisala. Les origines de Vaisala remontent aux années 1930 lorsque le professeur Vilho Väisälä, fondateur et directeur général de longue date de Vaisala, a inventé certains des principes de fonctionnement d'une radiosonde. L'entreprise a été créée en 1936 en Finlande et les premières radiosondes ont été fabriquées au sous-sol d'un immeuble résidentiel au centre d'Helsinki. Après un début modeste, l'entreprise a évolué pour devenir un leader mondial dans de nombreux domaines de mesure. Vaisala est un leader mondial de la mesure environnementale et industrielle. S'appuyant sur plus de 80 ans d'expérience, Vaisala fournit des observations pour un monde meilleur. Nous sommes un partenaire fiable pour les clients du monde entier, offrant une gamme complète de produits et services innovants d'observation et de mesure. Même si le systemes de Vaisala sont plus cher, avec des prix variee entre 300 a 3000 Euro, des produits sont tres qualitatifs.
 
 ### 3.3 Analyse des services de base de données appropriés pour ce projet
 
@@ -70,3 +73,5 @@ Pour ce projet, on doit connecter les composants suivants:
 L’interface entre notre systeme et la systeme de gestion des données qui va etre REST pour FirebaseDB or RestDB.
 
 ![Diagram](projectDiagram.svg)
+
+## 4. Le d ´eveloppement mat´eriel (hardware)
