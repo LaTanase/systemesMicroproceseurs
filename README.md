@@ -75,3 +75,25 @@ L’interface entre notre systeme et la systeme de gestion des données qui va e
 ![Diagram](projectDiagram.svg)
 
 ## 4. Le d ´eveloppement mat´eriel (hardware)
+
+### 4.1 Le choix des composants
+
+J'ai acheté un kit, UNO R3 Super Starter Kit, qui contenait tous les composants nécessaires pour mener à bien ce projet. Je n'ai donc pas vraiment choisi les composants car j'ai appris à utiliser des composants basiques, pas très complexes.
+
+#### 4.1.1 Le capteur de temperature
+
+Les capteurs utilisés dans ce travail sont le capteur de température et d'humidité-DHT11. Le capteur DHT11 est un capteur analogique conçu pour détecter le changement physique de la chaleur et de l'humidité lorsqu'il est exposé à l'air avec un câblage et une programmation appropriés.
+Sa petite taille, son prix bon marché, sa faible consommation d'énergie, ses réponses rapides sont les caractéristiques pour être l'un des meilleurs choix pour de nombreux utilisateurs. Le capteur DHT11 est applicable en CVC (chauffage, ventilation et climatisation), il peut être utilisé pour tester et inspecter des équipements et des biens de consommation. Il peut également être utilisé pour la construction d'une station météo ou d'un régulateur d'humidité. L'utilisation du capteur DHT11 a montré son utilité pour mesurer et contrôler la température et l'humidité dans les appareils électroménagers, médicaux et bien d'autres secteurs.
+
+#### 4.1.2. Ecran LCD
+
+L'écran était également fourni avec le kit, j'ai donc utilisé un module LCD 1602.
+LCD1602, ou écran à cristaux liquides de type 1602, est une sorte de module à matrice de points pour afficher les lettres, les chiffres et les caractères, etc. Il est composé de positions matricielles 5x7 ou 5x11; chaque position peut afficher un caractère. Il y a un pas entre deux caractères et un espace entre les lignes, séparant ainsi les caractères et les lignes. Le modèle 1602 signifie qu'il affiche 2 lignes de 16 caractères.
+Généralement, le LCD1602 possède des ports parallèles, c'est-à-dire qu'il contrôlerait plusieurs broches en même temps. LCD1602 peut être classé en connexions à huit et quatre ports. Si la connexion à huit ports est utilisée, tous les ports numériques de la carte SunFounder Uno sont presque entièrement occupés. Si vous souhaitez connecter plus de capteurs, aucun port ne sera disponible. Par conséquent, la connexion à quatre ports est utilisée ici pour une meilleure application.
+
+### 4.2. Liste finale de peripheriques
+
+| Composante | Format physique | Tension d'alimentation |
+|------------|-----------------|------------------------|
+| DHT11      | Module 1x3 pin  | 3.3V-5.5V              |
+| LCD1602    | Module 1x16 pin | 5V                     |
