@@ -106,3 +106,5 @@ Généralement, le LCD1602 possède des ports parallèles, c'est-à-dire qu'il c
 Après avoir choisi les principaux composants, vous pouvez commencer à dessiner le schéma électrique. Pour cette tâche, nous utiliserons KiCad, un logiciel libre et open source pour la conception de circuits imprimés. Ce logiciel est soutenu financièrement par le CERN et son format de fichier natif est accepté par de nombreux
 des services de fabrication de PCB bien connus, tels que OSHPark ou Aisler.
 CircuitMaker est une alternative open source, gratuite, mais avec des restrictions sur le partage de données.
+
+![Diagram](schemaElectrique.png)
