@@ -77,7 +77,7 @@ L’interface entre notre systeme et la systeme de gestion des données qui va e
 
 ![Diagram](projectDiagram.svg)
 
-## 4. Le d ´eveloppement mat´eriel (hardware)
+## 4. Le developpement materiel (hardware)
 
 ### 4.1 Le choix des composants
 
@@ -108,3 +108,41 @@ des services de fabrication de PCB bien connus, tels que OSHPark ou Aisler.
 CircuitMaker est une alternative open source, gratuite, mais avec des restrictions sur le partage de données.
 
 ![Diagram](schemaElectrique.png)
+
+## 5. Le developpement logiciel (software)
+
+### 5.1. Les experiences initiales
+
+J'ai assemblé toute l'application, puis j'ai commencé à exécuter le code pour voir que tout fonctionne selon le schéma electrique.
+
+#### 5.1.1. Modul DHT11
+
+J'ai installé le module dht11 selon le tableau ci-dessous. Ensuite, nous avons exécuté un code simple pour vérifier que les données qu'il reçoit sont correctes et que l'installation a réussi.
+
+| Module DHT11 | Arduino UNO |
+|--------------|-------------|
+| VCC          | 5V          |
+| GND          | GND         |
+| OUT          | A0          |
+
+Le code utilisee pour verifier si que le capteur fonctionne correctement a ete:
+
+    #include "dht.h"
+    #define dht_apin A0
+    
+    dht DHT;
+    
+    void setup(){
+
+    Serial.begin(9600);
+    delay(1000);
+    
+    }
+    
+    void loop(){
+
+        DHT.read11(dht_apin);
+        Serial.print(DHT.temperature);
+        delay(5000);
+    
+    }
