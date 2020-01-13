@@ -146,3 +146,66 @@ Le code utilisee pour verifier si que le capteur fonctionne correctement a ete:
         delay(5000);
     
     }
+
+#### 5.1.2. Modul LCD
+
+Après avoir monté le capteur de température et vu que tout fonctionnait correctement, j'ai commencé à monter l'écran LCD. Celui-ci était un peu plus difficile à installer car il me manquait divers équipements présents dans les tutoriels que j'ai suivis, mais au final j'ai trouvé un tutoriel qui ne nécessitait pas d'autres pièces.
+Dans le tableau ci-dessous, vous pouvez voir comment nous avons fait l'assemblage entre l'écran LCD et la carte Arduino, selon le schéma electrique.
+
+| Module LCD | Arduino UNO        |
+|------------|--------------------|
+| VSS        | GND                |
+| VDD        | 5V                 |
+| V0         | A1                 |
+| RS         | PIN 12             |
+| RW         | GND                |
+| E          | PIN 11             |
+| D4         | PIN 5              |
+| D5         | PIN 4              |
+| D6         | PIN 3              |
+| D7         | PIN 2              |
+| A          | 5V vers Resistance |
+| K          | GND                |
+
+Le code utilisee pour verifier si que l'ecran LCD fonctionne correctement avec le capteur est:
+
+    // include the library code:
+    #include <LiquidCrystal.h>
+
+    // initialize the library by associating any needed LCD interface pin
+    // with the arduino pin number it is connected to
+    const int rs = 12, en = 11, d4 = 5, d5 = 4, d6 = 3, d7 = 2;
+    int i = 0;
+    LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
+    #include "dht.h"
+    #define dht_apin A0
+    
+    dht DHT;
+    
+    void setup(){
+
+    // set up the LCD's number of columns and rows:
+    lcd.begin(16, 2);
+    // Print a message to the LCD.
+    Serial.begin(9600);
+    delay(1000);
+    analogWrite(A1, 30);
+    
+    }
+    
+    void loop(){
+
+        DHT.read11(dht_apin);
+        lcd.print("Temp: ");
+        lcd.print(DHT.temperature);
+        Serial.print(DHT.temperature);
+        lcd.print(" %");
+        lcd.setCursor(0, 1);
+        lcd.print("Humi: ");
+        lcd.print(DHT.humidity);
+        lcd.print(" %");
+            
+        delay(5000);
+        lcd.clear();
+    }
