@@ -264,3 +264,9 @@ Le code ci-dessous prend la sortie de l'impression série et l'insère dans la b
 ## 6. Les notes de mise en oeuvre
 
 ## 7. Conclusions
+
+Le travail a réussi à construire un appareil de surveillance qui fonctionne comme un thermomètre pour mesurer la température et l'humidité à l'intérieur d'un bâtiment; il est capable de mesurer l'humidité et la température à l'extérieur. Comparé à un capteur coûteux, le processeur Arduino
+système de surveillance réduit avec succès la consommation d'énergie, le coût et la complexité du processus. Les performances du système étaient précises et fiables avec une erreur de mesure et des limitations du capteur utilisé.
+Les dispositifs de surveillance basés sur Arduino sont les nouvelles possibilités pour développer librement des appareils intelligents avec un petit budget et un travail simple. La course accélérée des technologies avancées surpasse rapidement la technologie utilisée dans Arduino Uno; des logiciels avancés fonctionnant de manière similaire sont disponibles. L'Arduino est programmé pour utiliser un câble USB pour se connecter à l'ordinateur alors qu'il existe de nombreuses autres cartes disponibles avec différentes fonctionnalités.
+L'une des fonctionnalités qui était agréable à avoir pour ce projet était de pouvoir communiquer avec la base de données via WI-FI, mais je n'ai pas pu utiliser le module ESP8266 à cet effet.
+Le projet était intéressant et a été pratiquement utile pour apprendre à utiliser des microcontrôleurs (Arduino), le langage de programmation C et l'électronique de base. Ce fut un projet très utile pour apprendre et comprendre le monde des microcontrôleurs et utiliser les microcontrôleurs dans la vie réelle.
