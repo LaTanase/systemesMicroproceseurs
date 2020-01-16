@@ -209,3 +209,58 @@ Le code utilisee pour verifier si que l'ecran LCD fonctionne correctement avec l
         delay(5000);
         lcd.clear();
     }
+	
+#### 5.1.3 Connexion avec la base de donnees
+
+parce que la connexion wifi du mode ESP8266 que j'ai essayé de faire ne fonctionnait pas, j'ai utilisé un script python pour l'insérer dans une base de données.
+J'ai également utilisé une base de données MySQL au lieu d'une base REST en raison des problèmes que j'ai rencontrés en essayant de configurer une base de données Firebase.
+
+Le code ci-dessous prend la sortie de l'impression série et l'insère dans la base de données MySQL.
+
+	import mysql.connector
+	from mysql.connector import Error
+	from mysql.connector import errorcode
+	import json
+	import serial
+	import datetime
+	# python -m pip install pyserial
+
+	try:
+		ser = serial.Serial('COM5', 9600)  # vezi pe ce COM e pus
+	except Error as e:
+		print(e)
+
+
+	try:
+		connection = mysql.connector.connect(host='localhost',
+											 database='DataAcquisition',
+											 user='root',
+											 password='root')
+
+		while True:
+			data = ser.readline().decode()
+			print(data)
+			measurement = json.loads(data)
+			print(measurement["temperature"])
+			print(measurement["humidity"])
+
+			mySql_insert_query = f"""INSERT INTO Measurements (Temperature, Humidity) 
+							   VALUES 
+							   ({measurement["temperature"]}, {measurement["humidity"]}) """
+			print(mySql_insert_query)
+			cursor = connection.cursor()
+			cursor.execute(mySql_insert_query)
+			connection.commit()
+			print(cursor.rowcount, "Record inserted successfully into Acquisition table")
+			cursor.close()
+	except mysql.connector.Error as error:
+		print("Failed to insert record into Laptop table {}".format(error))
+	finally:
+		if (connection.is_connected()):
+			connection.close()
+			print("MySQL connection is closed")
+
+
+## 6. Les notes de mise en oeuvre
+
+## 7. Conclusions
